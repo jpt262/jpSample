@@ -35,25 +35,6 @@ angular.module("app", [])
     newPopGen(gazellePopulation, $scope.gazelleEcosystem, gazelle)
     newPopGen(lionPopulation, $scope.lionEcosystem, lion)
 
-    function populationGenerator(population, ecosystem, locomotion) {
-      var i = 0;
-      for (; i < population; i += 1) {
-        if (locomotion) {
-            xVel = randomVector(5);
-            yVel = randomVector(5);
-        } else {
-            xVel = 0;
-            yVel = 0;
-        }
-        ecosystem.push({
-            x: randomDimension(rightBound),
-            y: randomDimension(bottomBound),
-            xVel: xVel,
-            yVel: yVel
-        });
-      }
-    };
-
     function randomDimension(int) {
       return Math.floor(Math.random() * int) + 1;
     };
@@ -173,7 +154,6 @@ angular.module("app", [])
       that.species = 'plant';
       that.energy = 100;
       that.xVel = that.yVel = 0;
-      that.locomotion = false;
       that.reproductionChance = 0.05;
       that.reproduce = function() {
         if(that.sex > 0 && randomDimension(1000) <= that.reproductionChance*1000) {
@@ -190,7 +170,6 @@ angular.module("app", [])
       that.energy = that.energyMax;
       that.xVel = randomVector(5);
       that.yVel = randomVector(5);
-      that.locototion = true;
       that.reproductionChance = 0.5;
       that.reproduce = function(ecosystem) {
         if(that.sex > 0 && randomDimension(100) <= that.reproductionChance*100) {
