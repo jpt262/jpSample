@@ -23,3 +23,4 @@ To do:
  * Move other-sensing locus to center of box instead of looking 10 pixels around upper left hand corner of box.
  * Prevent energy from going above max.  Currently eats only if current energy below max.
  * Fewer booleans.
+ * Testing, Grunt automation.
