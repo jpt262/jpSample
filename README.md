@@ -22,3 +22,4 @@ To do:
  * Provide DOM-based control elements to change input parameters at will to visualize how the same environment would play out with different settings (starting population size, reproduction chance, etc).
  * Move other-sensing locus to center of box instead of looking 10 pixels around upper left hand corner of box.
  * Prevent energy from going above max.  Currently eats only if current energy below max.
+ * Fewer booleans.
