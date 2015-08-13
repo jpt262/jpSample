@@ -1,7 +1,6 @@
 angular.module("app", [])
   .controller("MainController", function($scope, $interval) {
 
-    //init populations
     var leftBound = topBound = 0,
     rightBound = 800;
     bottomBound = 800;
@@ -51,7 +50,6 @@ angular.module("app", [])
       return pole;
     };
 
-    //animate every 50ms
     $interval(animate, 50);
 
     function animate () {
@@ -170,7 +168,6 @@ angular.module("app", [])
           newAnimal.x = that.x+randomVector(50);
           newAnimal.y = that.y+randomVector(50);
           newAnimal.energy = 25;
-          console.log(ecosystem[0], newAnimal)
           ecosystem.push(newAnimal);
         };
       };
