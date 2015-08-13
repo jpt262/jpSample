@@ -9,7 +9,7 @@ Taking the classic beginner programmer example of animal methods a step further,
 
  * Plants: Green squares.  Immobile lifeform.  Each lifeform in this population has a given probability to generate progeny.  Although each is assigned a sex, it reproduces regardless of gender.  Takes no food and does not die until eaten.  Provides 100 energy to predator.
 
- * Gazelles: Blue squares.  Mobile animal.  Feeds off of plants only.  At birth, is assigned random position, and X/Y velocities.  Dies when out of energy (decreases by half a point every fifty milliseconds) or when eaten by predator.  Does not eat if at or above max energy.  Reproduces depending on energy level, gender, and chance once it crosses pathes with another animal of same species and opposite sex.
+ * Gazelles: Blue squares.  Mobile animal.  Feeds off of plants only.  At birth, is assigned random position, and X/Y velocities.  Dies when out of energy (decreases by half a point every fifty milliseconds) or when eaten by predator.  Reproduces depending on energy level, gender, and chance once it crosses pathes with another animal of same species and opposite sex.
 
  * Lions: Red squares.  Mobile animal.  Feeds off of gazelles only.  Also has random physics properties at birth.  Has 300 energy at birth and decreases half a point every animation cycle (50ms).  Reproduces depending on energy level, gender, and chance once it crosses pathes with another animal of same species and opposite sex.
 
@@ -20,3 +20,5 @@ Uses parasitic inheritance versus prototypal/pseudoclassical patterns typically 
 To do:
 
  * Provide DOM-based control elements to change input parameters at will to visualize how the same environment would play out with different settings (starting population size, repoduction chance, etc).
+ * Move other-sensing locus to center of box instead of looking 10 pixels around upper left hand corner of box.
+ * Prevent energy from going above max.  Currently eats only if current energy below max.

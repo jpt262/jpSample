@@ -7,8 +7,8 @@
   <body ng-app="app">
     <div ng-controller="MainController">
       <div ng-repeat="plant in plantEcosystem" class="plant" ng-style="{'top': plant.y+'px', 'left': plant.x+'px'}"></div>
-      <div ng-repeat="gazelle in gazelleEcosystem track by $index" class="gazelle" ng-style="{'top': gazelle.y+'px', 'left': gazelle.x+'px'}" ng-click="log(gazelle)"></div>
-      <div ng-repeat="lion in lionEcosystem" class="lion" ng-style="{'top': lion.y+'px', 'left': lion.x+'px'}" ng-click="log(lion)"></div>
+      <div ng-repeat="gazelle in gazelleEcosystem track by $index" class="gazelle" ng-style="{'top': gazelle.y+'px', 'left': gazelle.x+'px'}"></div>
+      <div ng-repeat="lion in lionEcosystem" class="lion" ng-style="{'top': lion.y+'px', 'left': lion.x+'px'}"></div>
     </div>
     
     <script src="/bower/angular/angular.js"></script>
