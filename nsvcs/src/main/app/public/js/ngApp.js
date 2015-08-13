@@ -55,7 +55,7 @@ angular.module("app", [])
     function animate () {
       movePopulation();
       if($scope.lionEcosystem.length === carryingCapacity && !carryingCapacityReached) {
-        reached = true;
+        carryingCapacityReached = true;
         $scope.lionEcosystem[0].roar();
       }
     }
