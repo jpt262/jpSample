@@ -1,0 +1,18 @@
+.plant {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+}
+.gazelle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+.lion {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}

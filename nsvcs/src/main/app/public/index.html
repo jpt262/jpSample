@@ -1,8 +1,17 @@
+<!doctype html>
 <html>
-<head>
-	<title></title>
-</head>
-<body>
-<h1>hi</h1>
-</body>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body ng-app="app">
+    <div ng-controller="MainController">
+      <div ng-repeat="plant in plantEcosystem" class="plant" ng-style="{'top': plant.y+'px', 'left': plant.x+'px'}"></div>
+      <div ng-repeat="gazelle in gazelleEcosystem track by $index" class="gazelle" ng-style="{'top': gazelle.y+'px', 'left': gazelle.x+'px'}" ng-click="log(gazelle)"></div>
+      <div ng-repeat="lion in lionEcosystem" class="lion" ng-style="{'top': lion.y+'px', 'left': lion.x+'px'}" ng-click="log(lion)"></div>
+    </div>
+    
+    <script src="/bower/angular/angular.js"></script>
+    <script type="text/javascript" src="/js/ngApp.js"></script>
+  </body>
 </html>
